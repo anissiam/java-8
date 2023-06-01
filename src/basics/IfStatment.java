@@ -4,15 +4,209 @@ import java.util.Scanner;
 
 public class IfStatment {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("plz enter month");
-        int month = input.nextInt();
-         if (month<=0 || month >12){
-             System.out.println("not valid");
-             return;
-         }
+        int x = 5;
+        int y = 3;
+        int z = x++ + y;
+        System.out.println(z);
 
-        if (month==1){
+        z = --y + x++;
+        System.out.println(z);
+
+        z = ++x * --y;
+        System.out.println(z);
+
+        z = ++x + x;
+        System.out.println(z);
+
+        Scanner input = new Scanner(System.in);
+        int s = input.nextInt();
+
+        if (s==0){
+            System.out.println("==0");
+        } else if (s<0) {
+            System.out.println("<0");
+        } else {
+            System.out.println(">0");
+        }
+
+        /*int x = 3;
+
+        String result = (x%2!=0)?"odd":"even";
+        System.out.println(result);
+
+        if (x%2!=0){
+            System.out.println("odd");
+        }else {
+            System.out.println("even");
+        }*/
+
+        /*if (x > 0)
+            System.out.println("x is greater than 0");
+         else {
+            System.out.println("x is less than or equal 0");
+        }*/
+
+        /*System.out.println("plz enter santance");
+        String ss = input.nextLine();
+
+        if (ss.contains("@")){
+            System.out.println("Email");
+        }else if(ss.contains(":")){
+            System.out.println("url");
+        }else {
+            System.out.println("normal text");
+        }
+*/
+        /*System.out.println("plz enter x");
+        int x = input.nextInt();
+
+        System.out.println("plz enter y");
+        int y = input.nextInt();
+
+       System.out.println("1)Add\n2)Sub\n3)div\n4)exit");
+
+        int choice = input.nextInt();
+        switch (choice){
+            case 1 :
+                System.out.println(x+y);
+                break;
+            case 2 :
+                System.out.println(x-y);
+                break;
+            case 3 :
+                if (y==0){
+                    System.out.println("can't dived by zero");
+                }else {
+                    System.out.println(x/y);
+                }
+                break;
+            case 4: System.exit(0);
+            default:
+                System.out.println("not option");
+        }
+*/
+
+
+        /*System.out.println("Plz enter you name");
+        String name = input.nextLine();
+
+        char x = name.charAt(0);
+        switch (x){
+            case 'a','A' : System.out.println("you name start with a");
+            break;
+            case 'b','B' : System.out.println("you name start with b");
+                break;
+            case 'c','C' : System.out.println("you name start with c");
+                break;
+            default:System.out.println("wrong!!");
+        }*/
+
+       /* System.out.println("plz enter num");
+        int num = input.nextInt();
+
+        switch (num) {
+            case 1:
+                System.out.println("1");
+                break;
+            case 2:
+            case 3:
+                System.out.println("2 Or 3");
+                break;
+            case 4:
+                System.out.println("4");
+                break;
+            default:
+                System.out.println("wrong!!");break;
+        }*/
+
+        /*if (num == 1) {
+            System.out.println("1");
+        } else if (num == 2 || num == 3) {
+            System.out.println("2 or 3");
+        } else if (num == 4) {
+            System.out.println("4");
+        } else {
+            System.out.println("wrong!!");
+        }
+*/
+
+
+        /*
+        System.out.println("plz enter month");
+        String month = input.nextLine();
+
+        if (month.equals("jan")){
+            System.out.println("1");
+        } else if (month.equals("feb")) {
+            System.out.println("2");
+        } else {
+            System.out.println("not valid");
+        }*/
+
+
+        /*switch (month) {
+            case "jan":
+                System.out.println("1");
+                break;
+            case "feb":
+                System.out.println("2");
+                break;
+            default:System.out.println("not valid");
+            break;
+        }*/
+
+
+
+
+        /*int month = input.nextInt();
+        if (month <= 0 || month > 12) {
+            System.out.println("not valid");
+            return;
+        }
+
+        switch (month) {
+            case 1:
+                System.out.println("Jan");
+                break;
+            case 2:
+                System.out.println("Feb");
+                break;
+            case 3:
+                System.out.println("March");
+                break;
+            case 4:
+                System.out.println("Apr");
+                break;
+            case 5:
+                System.out.println("May");
+                break;
+            case 6:
+                System.out.println("Jun");
+                break;
+            case 7:
+                System.out.println("Jul");
+                break;
+            case 8:
+                System.out.println("Augs");
+                break;
+            case 9:
+                System.out.println("Spe");
+                break;
+            case 10:
+                System.out.println("Oct");
+                break;
+            case 11:
+                System.out.println("Nov");
+                break;
+            case 12:
+                System.out.println("Dec");
+                break;
+        }*/
+
+
+
+
+        /*if (month==1){
             System.out.println("Jan");
         } else if (month==2) {
             System.out.println("Feb");
@@ -36,7 +230,7 @@ public class IfStatment {
             System.out.println("nov");
         } else {
             System.out.println("dec");
-        }
+        }*/
 
 
 
@@ -130,8 +324,6 @@ public class IfStatment {
         }else {
             System.out.println("the num is less than zero");
         }*/
-
-
 
 
         System.out.println("Done");
