@@ -4,7 +4,72 @@ import java.util.Scanner;
 
 public class IfStatment {
     public static void main(String[] args) {
-        int x = 5;
+
+        Scanner scanner = new Scanner(System.in);
+        int a1 = scanner.nextInt();
+        int a2 = scanner.nextInt();
+        int a3 = scanner.nextInt();
+
+        int result = a1 + a2 + a3;
+        if (a1<=0){
+            System.out.println("not angle");
+            return;
+        }
+
+        if (a2<=0){
+            System.out.println("not angle");
+            return;
+        }
+
+        if (a3<=0){
+            System.out.println("not angle");
+            return;
+        }
+        if(result==180 ){
+            System.out.println("Tringle");
+        }else {
+            System.out.println("not T");
+        }
+        /*System.out.println("plz enter the letter ");
+
+        String letter = scanner.nextLine();
+
+        char c = letter.toUpperCase().charAt(0);
+
+        switch (c){
+            case 'A','B','C':System.out.println("ابجديا");
+            break;
+            default:
+                System.out.println("ليس ابجديا");
+        }*/
+
+       /* System.out.println("plz enter n1 ");
+        int x = scanner.nextInt();
+
+        System.out.println("plz enter n2 ");
+        int y = scanner.nextInt();
+
+        System.out.println("plz enter n3 ");
+        int z = scanner.nextInt();
+        if (x>y || x>z){
+            System.out.println(x  + " is max");
+        } else if (y > z || y > x) {
+            System.out.println(y +" is max");
+        } else {
+            System.out.println(z + " is max");
+
+        }
+*/
+
+        /*if (x==0){
+            System.out.println("=0");
+        } else if (x<0) {
+            System.out.println("Negative");
+        }else {
+            System.out.println("Postive");
+        }*/
+
+        /*int x = 5;
         int y = 3;
         int z = x++ + y;
         System.out.println(z);
@@ -27,7 +92,7 @@ public class IfStatment {
             System.out.println("<0");
         } else {
             System.out.println(">0");
-        }
+        }*/
 
         /*int x = 3;
 
