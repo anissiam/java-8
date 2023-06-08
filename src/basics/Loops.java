@@ -7,12 +7,48 @@ public class Loops {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i < 4; i++) {
+            for (int j = 1; j < 11; j++) {
+                System.out.print(i+"*"+j +"= " + (i*j));
+            }
+            System.out.println("===========");
+        }
+        /*for (;;) {
+            int i = scanner.nextInt();
+            if (i==0){
+                System.out.println("stop");
+               continue;
+            }
+
+            if (i%2==0){
+                System.out.println("Even");
+            }else {
+                System.out.println("Odd");
+            }
+        }*/
+        /*String ss = scanner.nextLine();
+        System.out.println(ss=="stop");*/
+
+        /*System.out.println("plz enter name ");
+        String ss = scanner.nextLine();
+        for (;!ss.equalsIgnoreCase("Stop");) {
+           System.out.println("plz enter name ");
+             ss = scanner.nextLine();
+
+        }*/
+        
+       /* for (int i = 1; i < 10; i++) {
+            System.out.print("1/" + i );
+            if (i<9){
+               System.out.print(" + ");
+            }
+        }*/
+        /*for (int i = 0; i < 5; i++) {
             for (int j = 0; j <=i; j++) {
                 System.out.print("*");
             }
             System.out.println();
-        }
+        }*/
 
 
         /*for (int i = 0; i < 3; i++) {
