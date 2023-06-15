@@ -3,9 +3,10 @@ package basics;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Project {
+public class ProjectMethod {
+    static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+
         String names[] = new String[5];
         int marks[] = new int[5];
 
@@ -17,20 +18,7 @@ public class Project {
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println("1)Names\n2)Marks");
-                    int c = input.nextInt();
-                    switch (c) {
-                        case 1:
-                            for (String name : names) {
-                                System.out.print(name + " ");
-                            }
-                            break;
-                        case 2:
-                            for (int i = 0; i < marks.length; i++) {
-                                System.out.print(marks[i] + " ");
-                            }
-                            break;
-                    }
+                    showSubMenu(names, marks);
                     break;
                 case 2:
                     input.nextLine();
@@ -93,5 +81,21 @@ public class Project {
 
     }
 
+    public static void showSubMenu(String [] names , int [] marks){
 
+        System.out.println("1)Names\n2)Marks");
+        int c = input.nextInt();
+        switch (c) {
+            case 1:
+                for (String name : names) {
+                    System.out.print(name + " ");
+                }
+                break;
+            case 2:
+                for (int i = 0; i < marks.length; i++) {
+                    System.out.print(marks[i] + " ");
+                }
+                break;
+        }
+    }
 }
