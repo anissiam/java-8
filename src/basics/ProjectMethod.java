@@ -73,7 +73,7 @@ public class ProjectMethod {
                     }
                     break;
                 case 7:
-                    System.exit(0);
+                    exit();
                     break;
             }
 
@@ -97,5 +97,9 @@ public class ProjectMethod {
                 }
                 break;
         }
+    }
+
+    public static void exit(){
+        System.exit(0);
     }
 }
