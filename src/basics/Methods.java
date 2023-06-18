@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class Methods {
     public static void main(String[] args) {
+
+        sum(1,5);
+        sum("1","5");
+
+
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("1)add\n2)sub3)division");
 
@@ -103,6 +109,11 @@ public class Methods {
 
         int result = x + y;
         System.out.println(result);
+    }
+
+    public static void sum(String s1, String s2) {
+
+        System.out.println(s1 + s2);
     }
 
     public static void sub(int x, int y) {
