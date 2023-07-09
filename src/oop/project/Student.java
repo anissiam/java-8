@@ -4,7 +4,6 @@ public class Student  extends Person{
     private int id;
     private byte mark;
     private String major;
-
     public Student() {
     }
 

@@ -1,32 +1,68 @@
 package oop.project;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static Student[] studentsArr = new Student[10];
     public static void main(String[] args) {
+        Student[] studentsArr = new Student[10];
+        ProjectMethods projectMethods = new ProjectMethods(studentsArr);
 
+        //System.out.println(ProjectMethods.arraySize);
         int c ;
         do {
             System.out.println();
             System.out.println("====================================================================");
             System.out.println("1-Add Student\n2-Show Student\n3-Show All Student\n4-Update Student\n" +
-                    "5-Delete Student\n6-Order Student by mark\n7-Exit");
+                    "5-Delete Student\n6-Order Student by mark\n7-Get all Success student");
             c = scanner.nextInt();
             switch (c){
                 case 1 :
-                    addStudent();
+                    projectMethods.addStudent();
                     break;
                 case 2 :
-                    showStudent();
+                    if (projectMethods.getStudent()!=null){
+                        System.out.println(projectMethods.getStudent().toString());
+                    }else {
+                        System.out.println("Not found");
+                    }
                     break;
+                case 3 :
+                    ProjectMethods.getAllStudent();
+                    break;
+                case 4 :
+                    projectMethods.updateStudent();
+                    break;
+                case 5 :
+                    projectMethods.deleteStudent();
+                    break;
+                case  6 :
+                    Arrays.sort(ProjectMethods.getArray(), new Comparator<Student>() {
+                        @Override
+                        public int compare(Student o1, Student o2) {
+                            if (o1!=null && o2!=null){
+                                int s = Integer.compare(o1.getMark(), o2.getMark());
+                                return s;
+
+                            }else {
+                                return  0;
+                            }
+                        }
+                    });
+
+                    break;
+                case 7:
+                        projectMethods.getSuccess();
+                        break;
+
 
             }
-        } while (c < 7);
+        } while (c < 8);
     }
 
-    private static void showStudent() {
+    /*private static void showStudent() {
         System.out.println("Plz Enter Student Id");
         int id = scanner.nextInt();
 
@@ -86,6 +122,6 @@ public class Main {
         studentsArr[id] = studentObj;
 
         System.out.println(" Student Added ");
-    }
+    }*/
 
 }
